@@ -1,5 +1,5 @@
 export interface Music {
-  id?: Number;
+  id?: string;
   title?: string;
   description?: string;
   album?: string;

@@ -20,10 +20,12 @@ export class AccueilComponent {
   }
 
   delete(musique: Music){
-    this.httpClient.delete("http://localhost:3000/musics/"+musique.id).subscribe(() => {
+    this.httpClient.delete("http://localhost:3000/musics/:id".replace(':id', musique.id!)).subscribe(() => {
+      window.location.reload();
+
     });
-    window.location.reload();
   }
+
 
 
   edit(musique: Music){
