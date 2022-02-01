@@ -1,0 +1,30 @@
+
+<section>
+
+  <mat-card class="carteCustom">
+    <mat-card-header>
+      <mat-card-title> title : {{musique?.title}} </mat-card-title>
+      <mat-card-title> album :  {{musique?.album}}</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      description : {{musique?.description}} <br>
+      album  : {{musique?.album}} <br>
+      durée : {{musique?.duration}} <br>
+      artiste : {{musique?.artiste}} <br>
+      date : {{musique?.date}} <br>
+      style : {{musique?.style}} <br>
+    </mat-card-content>
+
+    <mat-card-actions align="end">
+      <button mat-mini-fab aria-label="Editer" color="accent"  (click)="edit()">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-mini-fab aria-label="Supprimer" color="warn" (click)="delete()">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-card-actions>
+
+  </mat-card>
+</section>

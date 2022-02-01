@@ -1,0 +1,39 @@
+<section [ngSwitch]="view" >
+
+
+  <section *ngSwitchCase="'card'">
+      <carte [musique]="musique" (musicDelete)="delete($event)" (musicEdit)="edit($event)" *ngFor="let musique of liste_musique" ></carte>
+  </section>
+
+
+  <section *ngSwitchCase="'list'">
+    <mat-list>
+      <mat-list-item *ngFor="let musique of liste_musique" class="mat-whiteframe-2dp mat-card">
+
+        <h3 mat-line>{{ musique?.title }} </h3>
+        <p mat-line>
+          <span></span> — <span> <p mat-line>
+            <span> artiste :  {{ musique.artiste }} </span> — <span> description : {{ musique.description }} </span> <span> durée : {{musique?.duration}}</span>
+          </p></span>
+        </p>
+      </mat-list-item>
+    </mat-list>
+  </section>
+
+</section>
+
+
+
+
+<section class="buttons-fab">
+  <button (click)="switchView()" mat-fab color="warn">
+    <em class="material-icons" *ngIf="view === 'card'">list</em>
+    <em class="material-icons" *ngIf="view === 'list'">view_stream</em>
+  </button>
+</section>
+
+
+
+<!-- <button id="refresh" mat-fab color="primary" (click)="random()">
+  <mat-icon>refresh</mat-icon>
+</button> -->
