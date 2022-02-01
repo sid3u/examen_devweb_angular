@@ -2,3 +2,6 @@
 
 
 Nassym SID M2 GI
+
+
+Je n'ai pas fait les fonctions "ajouter" et "modifier" les musiques
